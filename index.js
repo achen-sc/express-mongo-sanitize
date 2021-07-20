@@ -1,7 +1,7 @@
 'use strict';
 
-const TEST_REGEX = /^\$|\./;
-const REPLACE_REGEX = /^\$|\./g;
+const TEST_REGEX = /^\$/;
+const REPLACE_REGEX = /^\$/g;
 
 function isPlainObject(obj) {
   return typeof obj === 'object' && obj !== null;
