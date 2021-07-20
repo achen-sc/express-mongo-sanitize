@@ -91,12 +91,14 @@ const hasProhibited = mongoSanitize.has(payload);
 
 ## What?
 
-This module searches for any keys in objects that begin with a `$` sign or contain a `.`, from `req.body`, `req.query` or `req.params`. It can then either:
+This module searches for any keys in objects that begin with a `$` sign from `req.body`, `req.query` or `req.params`. It can then either:
 
 - completely remove these keys and associated data from the object, or
 - replace the prohibited characters with another allowed character.
 
 The behaviour is governed by the passed option, `replaceWith`. Set this option to have the sanitizer replace the prohibited characters with the character passed in.
+
+NOTE: Keys containing a `.` will not be sanitized.
 
 See the spec file for more examples.
 
